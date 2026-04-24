@@ -8,17 +8,17 @@ const images = [
     text: "Svaka biljka raste s ljubavlju i pažnjom",
   },
   {
-    img: "../../public/images/image 2.jpg",
+    img: "/images/image 2.jpg",
     title: "Svježe cvijeće",
     text: "Boje koje oživljavaju svaki prostor",
   },
   {
-    img: "../../public/images/image 3.jpg",
+    img: "/images/image 3.jpg",
     title: "Zdravo povrće",
     text: "Prirodno uzgojeno bez hemije",
   },
   {
-    img: "../../public/images/image 4.jpg",
+    img: "/images/image 4.jpg",
     title: "Porodična tradicija",
     text: "Više od decenije posvećenog rada",
   },
