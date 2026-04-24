@@ -1,13 +1,13 @@
 import "../Css/Carousel.css";
 
 const images = [
-  "../../public/images/image 5.jpg",
-  "../../public/images/image 6.jpg",
-  "../../public/images/image 7.jpg",
-  "../../public/images/image 8.jpg",
-  "../../public/images/image 9.jpg",
-  "../../public/images/image 10.jpg",
-  "../../public/images/image 11.jpg",
+  "/images/image 5.jpg",
+  "/images/image 6.jpg",
+  "/images/image 7.jpg",
+  "/images/image 8.jpg",
+  "/images/image 9.jpg",
+  "/images/image 10.jpg",
+  "/images/image 11.jpg",
 ];
 
 function Carousel() {

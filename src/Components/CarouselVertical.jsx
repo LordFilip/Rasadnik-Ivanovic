@@ -2,13 +2,13 @@ import { useEffect, useRef, useState } from "react";
 import "../Css/CarouselVertical.css";
 
 const images = [
-  "../../public/images/image 12.jpg",
-  "../../public/images/image 13.jpg",
-  "../../public/images/image 14.jpg",
-  "../../public/images/image 15.jpg",
-  "../../public/images/image 16.jpg",
-  "../../public/images/image 17.jpg",
-  "../../public/images/image 11.jpg",
+  "/images/image 12.jpg",
+  "/images/image 13.jpg",
+  "/images/image 14.jpg",
+  "/images/image 15.jpg",
+  "/images/image 16.jpg",
+  "/images/image 17.jpg",
+  "/images/image 11.jpg",
 ];
 
 function WhyUs() {
