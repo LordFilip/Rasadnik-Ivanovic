@@ -1,0 +1,209 @@
+/* ===================== */
+/* SECTION */
+/* ===================== */
+
+.whyus {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 140px 160px;
+  min-height: 700px;
+
+  gap: 80px;
+  background: #fff;
+
+  /* ❌ removed load animation */
+  opacity: 0;
+  transform: translateY(60px);
+  transition: all 0.8s ease;
+}
+
+/* ===================== */
+/* TEXT */
+/* ===================== */
+
+.whyus-text {
+  flex: 1;
+
+  /* ❌ removed load animation */
+  opacity: 0;
+  transform: translateY(60px);
+  transition: all 0.8s ease;
+}
+
+.whyus-text h2 {
+  font-size: 42px;
+  margin-bottom: 30px;
+
+  text-decoration: underline;
+  text-underline-offset: 8px;
+  text-decoration-thickness: 3px;
+  text-decoration-color: #4caf50;
+}
+
+.whyus-text ul {
+  list-style: none;
+  padding: 0;
+}
+
+.whyus-text li {
+  font-size: 18px;
+  margin-bottom: 18px;
+  line-height: 1.5;
+
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease;
+}
+
+/* ===================== */
+/* CAROUSEL */
+/* ===================== */
+
+.whyus-carousel {
+  flex: 1;
+  height: 500px;
+
+  overflow: hidden;
+  position: relative;
+
+  /* ❌ removed load animation */
+  opacity: 0;
+  transform: translateY(60px);
+  transition: all 0.8s ease;
+
+  /* fade effect */
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    transparent,
+    black 12%,
+    black 88%,
+    transparent
+  );
+
+  mask-image: linear-gradient(
+    to bottom,
+    transparent,
+    black 12%,
+    black 88%,
+    transparent
+  );
+}
+
+/* ===================== */
+/* TRACK */
+/* ===================== */
+
+.vertical-track {
+  display: flex;
+  flex-direction: column;
+
+  animation: scrollDown 20s linear infinite;
+  will-change: transform;
+}
+
+/* ITEM */
+.vertical-item {
+  height: 160px;
+  margin-bottom: 10px;
+
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+/* IMAGE */
+.vertical-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  transition: transform 0.4s ease;
+}
+
+.vertical-item:hover img {
+  transform: scale(1.05);
+}
+
+/* ===================== */
+/* SCROLL TRIGGER STATE (NEW) */
+/* ===================== */
+
+.whyus.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.whyus.active .whyus-text {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.whyus.active .whyus-carousel {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* list stagger */
+.whyus.active .whyus-text li {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===================== */
+/* ANIMATION (carousel ostaje isto) */
+/* ===================== */
+
+@keyframes scrollDown {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(-50%);
+  }
+}
+
+/* pause on hover */
+.whyus-carousel:hover .vertical-track {
+  animation-play-state: paused;
+}
+
+/* ===================== */
+/* RESPONSIVE */
+/* ===================== */
+
+@media (max-width: 768px) {
+  /* ❌ sakrij carousel */
+  .whyus-carousel {
+    display: none;
+  }
+
+  /* ✔ ukloni prazan prostor */
+  .whyus {
+    flex-direction: column;
+    padding: 60px 25px;
+    text-align: center;
+    gap: 30px;
+
+    /* 🔥 KLJUČ FIX - nema praznog prostora */
+    min-height: auto;
+    justify-content: flex-start;
+  }
+
+  .whyus-text h2 {
+    font-size: 32px;
+  }
+
+  .whyus-text li {
+    font-size: 16px;
+  }
+  .whyus-carousel {
+    width: 100%;
+    height: 260px;
+  }
+  .vertical-item {
+    height: 80px;
+    margin-bottom: 6px;
+  }
+}

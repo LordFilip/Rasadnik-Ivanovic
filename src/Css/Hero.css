@@ -1,0 +1,98 @@
+.hero {
+  height: 90vh;
+
+  background-image: url("../../public/images/image 1.jpg");
+  background-size: cover;
+  background-position: center;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+}
+/* tamni overlay preko slike */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+/* centralni box */
+.hero-overlay {
+  position: relative;
+  text-align: center;
+  color: white;
+
+  padding: 80px 100px;
+  border-radius: 20px;
+
+  background: linear-gradient(
+    135deg,
+    rgba(255, 105, 180, 0.75),
+    rgba(255, 140, 0, 0.65),
+    rgba(255, 69, 58, 0.65)
+  );
+
+  backdrop-filter: blur(6px);
+
+  /* ANIMACIJA */
+  opacity: 0;
+  animation: fadeUp 1s ease-out forwards;
+  z-index: 100;
+}
+
+/* naslov */
+.hero-overlay h1 {
+  font-size: 80px;
+  font-weight: 800;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+
+  opacity: 0;
+  animation: fadeUp 1.2s ease-out forwards;
+}
+
+/* slogan */
+.hero-overlay p {
+  font-size: 32px;
+  font-weight: 500;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+  opacity: 0;
+  animation: fadeUp 1.5s ease-out forwards;
+}
+
+/* ANIMACIJE */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .hero-overlay {
+    padding: 40px 30px;
+    width: 90vw;
+  }
+
+  .hero-overlay h1 {
+    font-size: 50px;
+  }
+
+  .hero-overlay p {
+    font-size: 20px;
+    flex-direction: column;
+  }
+}

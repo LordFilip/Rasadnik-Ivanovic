@@ -1,0 +1,78 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 160px;
+
+  background: linear-gradient(90deg, #2f7d32, #4caf50);
+  color: white;
+
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 26px;
+  font-weight: 700;
+}
+
+/* desktop */
+.links {
+  display: flex;
+  gap: 25px;
+}
+
+.links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.hamburger {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 20px;
+  }
+  .hamburger {
+    display: block;
+  }
+
+  .links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+
+    width: 100%;
+    background: #2f7d32;
+
+    display: flex;
+    flex-direction: column;
+
+    /* centriranje KONTEJNERA horizontalno */
+    align-items: center;
+
+    height: 0;
+    overflow: hidden;
+
+    transition: height 0.3s ease;
+  }
+
+  .links.active {
+    height: 180px;
+  }
+
+  /* OVO JE KLJUČ */
+  .links a {
+    width: 200px; /* blok širina */
+    text-align: left; /* tekst lijevo */
+    padding: 10px 0;
+
+    font-size: 18px;
+  }
+}

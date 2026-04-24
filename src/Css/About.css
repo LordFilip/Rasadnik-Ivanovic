@@ -1,0 +1,100 @@
+.about {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+
+  padding: 100px 160px;
+  background: #f7f7f7;
+
+  /* ANIMACIJA START */
+  opacity: 0;
+  transform: translateY(60px);
+  transition: all 0.8s ease;
+}
+
+/* aktivna animacija */
+.about.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Lijeva slika */
+.about-image {
+  flex: 1;
+  height: 550px;
+
+  border-radius: 20px;
+  overflow: hidden;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+
+  /* animacija */
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: all 0.8s ease;
+}
+
+.about.show .about-image {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* IMG */
+.about-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Tekst */
+.about-text {
+  flex: 1;
+
+  opacity: 0;
+  transform: translateX(50px);
+  transition: all 0.8s ease;
+}
+
+.about.show .about-text {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.about-text h2 {
+  font-size: 40px;
+  margin-bottom: 20px;
+
+  text-decoration: underline;
+  text-underline-offset: 8px;
+  text-decoration-thickness: 3px;
+  text-decoration-color: #4caf50;
+}
+
+.about-text p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .about {
+    flex-direction: column;
+    padding: 60px 30px;
+    text-align: center;
+  }
+
+  .about-image {
+    order: 2;
+    width: 100%;
+    height: 380px;
+  }
+
+  .about-text {
+    text-align: center;
+    order: 1;
+  }
+}
