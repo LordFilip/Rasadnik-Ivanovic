@@ -26,8 +26,8 @@ function LocationMap() {
       <div className="map-text">
         <h2>Naša lokacija</h2>
         <p>
-          Posjetite nas u Rasadniku Ivanović. Nalazimo se u Podgorici i uvijek
-          smo otvoreni za naše kupce.
+          Posjetite nas u Rasadniku Ivanović. Nalazimo se u Danilovgradu i
+          uvijek smo otvoreni za naše kupce.
         </p>
 
         <div className="info">
