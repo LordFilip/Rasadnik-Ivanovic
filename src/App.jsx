@@ -6,6 +6,7 @@ import Gallery from "./Components/Gallery";
 import Carousel from "./Components/Carousel";
 import Footer from "./Components/Footer";
 import CarouselVertical from "./Components/CarouselVertical";
+import LocationMap from "./Components/LocationMap";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <Gallery />
       <Carousel />
       <CarouselVertical />
+      <LocationMap />
       <Footer />
     </>
   );
