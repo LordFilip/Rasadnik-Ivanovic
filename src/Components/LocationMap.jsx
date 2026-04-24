@@ -31,7 +31,7 @@ function LocationMap() {
         </p>
 
         <div className="info">
-          <p>📍 Podgorica, Crna Gora</p>
+          <p>📍 Lalevići, Danilovgrad</p>
           <p>🌿 Rasadnik Ivanović</p>
           <p>📞 Dostupni svaki dan</p>
         </div>
